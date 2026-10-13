@@ -1,0 +1,158 @@
+/* ==========================================================================
+   DAPUR AQSA - CSS3 MURNI
+   ========================================================================== */
+
+/* --- 1. VARIABEL WARNA & TEMA --- */
+:root {
+  --brown: #5C3825;          /* Menggunakan Cokelat */
+  --brown-dark: #5C3825;     /* Menggunakan Cokelat */
+  --brown-light: #FF8A3D;    /* Menggunakan Oranye sebagai aksen terang */
+  --cream: #FFF7E8;          /* Menggunakan Cream */
+  --cream-deep: #FFD166;     /* Menggunakan Kuning untuk variasi kedalaman */
+  --paper: #FFF7E8;          /* Menggunakan Cream */
+  --text: #5C3825;           /* Menggunakan Cokelat untuk teks */
+  --muted: #5C3825;          /* Menggunakan Cokelat */
+  --border: #FFD166;         /* Menggunakan Kuning untuk border */
+  --shadow: 0 12px 32px rgba(92, 56, 37, 0.15);
+}
+
+/* --- 2. RESET & PENGATURAN DASAR --- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--text); background: var(--paper); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+
+/* --- 3. LAYOUT UTAMA & CONTAINER --- */
+.container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.section { padding-top: 65px; padding-bottom: 72px; }
+.section-soft { background: var(--cream); }
+.section-heading { max-width: 650px; margin: 0 auto 34px; text-align: center; }
+.section-heading h2, .callout h2, .story-copy h2, .order-panel h2 { margin-bottom: 10px; color: var(--brown-dark); font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; }
+.section-heading > p:last-child { margin-bottom: 0; color: var(--muted); }
+.center { margin-top: 28px; text-align: center; }
+
+/* --- 4. HEADER & NAVIGASI --- */
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(255, 248, 237, 0.96); border-bottom: 1px solid var(--border); }
+.nav-wrap { min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 11px; color: var(--brown-dark); text-decoration: none; font-size: 1.1rem; font-weight: 800; line-height: 1.2; }
+.brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .7rem; font-weight: 400; }
+.brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 14px; background: var(--brown); color: white; font-size: .85rem; }
+nav { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+nav a { padding: 9px 13px; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 700; }
+nav a:hover, nav a.active { color: var(--brown); background: var(--cream-deep); }
+
+/* --- 5. HERO SECTION (BANNER UTAMA) --- */
+.hero { display: flex; align-items: center; gap: 45px; padding-top: 66px; padding-bottom: 72px; }
+.hero-copy { flex: 1.1; }
+.eyebrow { margin: 0 0 10px; color: var(--brown-light); text-transform: uppercase; letter-spacing: .13em; font-size: .76rem; font-weight: 800; }
+h1 { margin-bottom: 18px; color: var(--brown-dark); font-size: clamp(2.3rem, 5vw, 4.15rem); line-height: 1.1; letter-spacing: -.045em; }
+h1 span { color: var(--brown-light); }
+.hero-copy > p:not(.eyebrow) { max-width: 580px; color: var(--muted); font-size: 1.04rem; }
+.hero-art { position: relative; flex: .9; min-width: 0; padding: 18px; border-radius: 34px; background: var(--cream); }
+.hero-art img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border-radius: 25px; }
+.floating-note { position: absolute; right: -12px; bottom: 34px; display: flex; flex-direction: column; padding: 14px 19px; border: 1px solid var(--border); border-radius: 14px; background: white; box-shadow: var(--shadow); }
+.floating-note span { color: var(--muted); font-size: .8rem; }
+.benefits { display: flex; flex-wrap: wrap; gap: 10px 18px; padding: 0; margin: 24px 0 0; list-style: none; color: var(--muted); font-size: .85rem; }
+
+/* --- 6. TOMBOL, TAG, & LINK --- */
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 11px 20px; border: 2px solid var(--brown); border-radius: 10px; background: var(--brown); color: white; text-decoration: none; font-weight: 700; transition: .2s ease; }
+.button:hover { background: var(--brown-dark); border-color: var(--brown-dark); transform: translateY(-1px); }
+.button-light { background: transparent; color: var(--brown); }
+.button-light:hover { background: var(--cream-deep); color: var(--brown-dark); }
+.text-link { color: var(--brown); font-weight: 800; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
+.tag { display: inline-block; padding: 3px 10px; border-radius: 30px; background: var(--cream-deep); color: var(--brown); font-size: .72rem; font-weight: 800; }
+.status { display: inline-block; padding: 3px 9px; border-radius: 20px; background: #e4f2df; color: #315a2a; font-size: .78rem; font-weight: 700; }
+
+/* --- 7. PRODUK & CARD --- */
+.product-grid { display: flex; align-items: stretch; gap: 22px; }
+.product-card { flex: 1; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: white; box-shadow: 0 5px 20px rgba(77, 48, 30, .04); }
+.product-card > img { width: 100%; height: 205px; object-fit: cover; background: var(--cream-deep); }
+.product-info { padding: 20px; }
+.product-info h3 { margin: 9px 0 5px; }
+.product-info p { min-height: 48px; margin-bottom: 10px; color: var(--muted); font-size: .9rem; }
+.product-info strong { color: var(--brown); }
+
+/* --- 8. HALAMAN & TENTANG KAMI (STORY) --- */
+.page-banner { padding: 56px 0 52px; background: var(--cream); border-bottom: 1px solid var(--border); text-align: center; }
+.page-banner h1 { margin-bottom: 12px; font-size: clamp(2.2rem, 4vw, 3.4rem); }
+.page-banner p:last-child { margin-bottom: 0; color: var(--muted); }
+.story-layout { display: flex; align-items: center; gap: 50px; }
+.story-image { flex: .85; padding: 25px; border-radius: 30px; background: var(--cream); }
+.story-image img { width: 500%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border-radius: 20px; }
+.story-copy { flex: 1.15; }
+.story-copy h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); }
+.story-copy p { color: var(--muted); }
+.story-copy h3 { margin: 20px 0 5px; color: var(--brown); }
+.check-list { padding-left: 20px; color: var(--muted); }
+.check-list li { margin-bottom: 6px; }
+.value-grid { display: flex; gap: 20px; }
+.value-card { flex: 1; padding: 25px; border: 1px solid var(--border); border-radius: 16px; background: white; }
+.value-card span { color: var(--brown-light); font-size: .8rem; font-weight: 800; }
+.value-card h3 { margin: 10px 0 6px; }
+.value-card p { margin-bottom: 0; color: var(--muted); }
+
+/* --- 9. GALERI --- */
+.gallery-grid { display: flex; flex-wrap: wrap; gap: 22px; }
+.gallery-item { flex: 1 1 calc(50% - 22px); min-width: 0; overflow: hidden; margin: 0; border: 1px solid var(--border); border-radius: 18px; background: white; }
+.gallery-item img { width: 100%; height: 280px; object-fit: cover; background: var(--cream-deep); }
+.gallery-item figcaption { display: flex; flex-direction: column; gap: 3px; padding: 16px 20px 19px; }
+.gallery-item figcaption span { color: var(--muted); font-size: .9rem; }
+
+/* --- 10. TABEL, CALLOUT, & PANEL --- */
+.notice { margin-top: 28px; padding: 16px 19px; border-left: 4px solid var(--brown-light); border-radius: 7px; background: var(--cream); color: var(--muted); font-size: .9rem; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
+table { width: 100%; min-width: 680px; border-collapse: collapse; text-align: left; }
+caption { padding: 15px; background: var(--cream); color: var(--brown); font-weight: 800; text-align: left; }
+th, td { padding: 15px 17px; border-bottom: 1px solid var(--border); }
+thead { background: var(--brown); color: white; }
+tbody tr:nth-child(even) { background: var(--cream); }
+tbody tr:last-child td { border-bottom: 0; }
+.callout { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding-top: 58px; padding-bottom: 58px; }
+.callout > div { max-width: 700px; }
+.callout p:not(.eyebrow) { margin-bottom: 0; color: var(--muted); }
+.order-panel { display: flex; justify-content: space-between; align-items: center; gap: 25px; margin-top: 30px; padding: 28px; border-radius: 18px; background: var(--cream); }
+.order-panel h2 { font-size: 1.8rem; }
+.order-panel p:not(.eyebrow) { margin-bottom: 0; color: var(--muted); }
+.small-note { margin: 15px 0 0; color: var(--muted); font-size: .83rem; }
+
+/* --- 11. FOOTER --- */
+.site-footer { background: var(--brown-dark); color: #f8ead8; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-top: 22px; padding-bottom: 22px; font-size: .83rem; }
+.footer-inner p { margin: 0; }
+.footer-inner a { color: #f8ead8; }
+
+/* --- 12. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 800px) {
+  .nav-wrap { align-items: flex-start; flex-direction: column; padding-top: 15px; padding-bottom: 13px; gap: 12px; }
+  nav { width: 100%; gap: 3px; }
+  nav a { padding: 8px 10px; font-size: .86rem; }
+  .hero { gap: 28px; padding-top: 45px; padding-bottom: 50px; }
+  .hero-art { flex: .8; padding: 10px; }
+  .floating-note { right: -4px; bottom: 20px; padding: 10px 12px; }
+  .product-grid { flex-wrap: wrap; }
+  .product-card { flex: 1 1 calc(50% - 22px); }
+  .story-layout { gap: 28px; }
+  .gallery-item img { height: 230px; }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(100% - 28px, 1120px); }
+  .hero, .story-layout, .callout, .order-panel { flex-direction: column; align-items: stretch; }
+  .hero { padding-top: 35px; gap: 30px; }
+  .hero-art { width: 100%; }
+  h1 { font-size: 2.5rem; }
+  .benefits { flex-direction: column; gap: 5px; }
+  .section { padding-top: 46px; padding-bottom: 50px; }
+  .product-card { flex-basis: 100%; }
+  .product-card > img { height: 230px; }
+  .value-grid { flex-direction: column; }
+  .gallery-item { flex-basis: 100%; }
+  .gallery-item img { height: 240px; }
+  .footer-inner { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .order-panel { align-items: flex-start; }
+  .button { width: fit-content; }
+}
